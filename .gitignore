@@ -1,2 +1,17 @@
+# Gradle / Kotlin
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.properties
+
 # IntelliJ IDEA / Android Studio
 .idea/
+*.iml
+local.properties
+
+# Kotlin
+*.class
+*.kt~
+
+# OS
+.DS_Store
+Thumbs.db
