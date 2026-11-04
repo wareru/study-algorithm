@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.24"
+    alias(libs.plugins.kotlin.jvm)
 }
 
 group = "study.algorithm"
@@ -10,8 +10,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
+    testImplementation(libs.kotest.runner.junit5)
+    testImplementation(libs.kotest.assertions.core)
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 tasks.test {

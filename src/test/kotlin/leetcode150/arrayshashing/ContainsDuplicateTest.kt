@@ -1,30 +1,26 @@
 package leetcode150.arrayshashing
 
-import kotlin.test.Test
-import kotlin.test.assertFalse
-import kotlin.test.assertTrue
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.matchers.shouldBe
 
-class ContainsDuplicateTest {
-    private val solution = ContainsDuplicate()
+class ContainsDuplicateTest : FunSpec({
+    val solution = ContainsDuplicate()
 
-    @Test
-    fun `중복이 있으면 true`() {
+    test("중복이 있으면 true") {
         val nums = intArrayOf(1, 2, 3, 3)
-        assertTrue(solution.hasDuplicate(nums))
-        assertTrue(solution.hasDuplicateWithSet(nums))
+        solution.hasDuplicate(nums) shouldBe true
+        solution.hasDuplicateWithSet(nums) shouldBe true
     }
 
-    @Test
-    fun `중복이 없으면 false`() {
+    test("중복이 없으면 false") {
         val nums = intArrayOf(1, 2, 3, 4)
-        assertFalse(solution.hasDuplicate(nums))
-        assertFalse(solution.hasDuplicateWithSet(nums))
+        solution.hasDuplicate(nums) shouldBe false
+        solution.hasDuplicateWithSet(nums) shouldBe false
     }
 
-    @Test
-    fun `빈 배열은 false`() {
+    test("빈 배열은 false") {
         val nums = intArrayOf()
-        assertFalse(solution.hasDuplicate(nums))
-        assertFalse(solution.hasDuplicateWithSet(nums))
+        solution.hasDuplicate(nums) shouldBe false
+        solution.hasDuplicateWithSet(nums) shouldBe false
     }
-}
+})
