@@ -1,3 +1,5 @@
+package leetcode150.arrays_hashing
+
 /**
  * Topics : Arrays & Hashing
  * Contains Duplicate
@@ -16,7 +18,7 @@
  * 0 <= nums.length <= 10^5
  * -10^9 <= nums[i] <= 10^9
  */
-class Solution {
+class ContainsDuplicateSolution {
     /**
      * 1. 처음 든 생각
      * set을 사용해서 크기가 줄어들면 중복이 있다는 뜻
